@@ -1,0 +1,342 @@
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 34.2956 s, 306 MB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/global/cscratch1/sd/jialin.old/hk/cpu/10000_1.txt bs=1M count=10000':
+
+      33338.075550 task-clock                #    0.965 CPUs utilized          
+               211 context-switches          #    0.006 K/sec                  
+               637 cpu-migrations            #    0.019 K/sec                  
+               443 page-faults               #    0.013 K/sec                  
+       50033504826 cycles                    #    1.501 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+       24968203412 instructions              #    0.50  insns per cycle        
+        5182283226 branches                  #  155.446 M/sec                  
+          73716909 branch-misses             #    1.42% of all branches        
+
+      34.563081469 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 35.2221 s, 298 MB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/global/cscratch1/sd/jialin.old/hk/cpu/10000_2.txt bs=1M count=10000':
+
+      32436.165453 task-clock                #    0.921 CPUs utilized          
+               251 context-switches          #    0.008 K/sec                  
+               565 cpu-migrations            #    0.017 K/sec                  
+               443 page-faults               #    0.014 K/sec                  
+       48679193119 cycles                    #    1.501 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+       24701104510 instructions              #    0.51  insns per cycle        
+        5137700050 branches                  #  158.394 M/sec                  
+          69945739 branch-misses             #    1.36% of all branches        
+
+      35.232812277 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 32.1427 s, 326 MB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/global/cscratch1/sd/jialin.old/hk/cpu/10000_3.txt bs=1M count=10000':
+
+      32068.948500 task-clock                #    0.997 CPUs utilized          
+                93 context-switches          #    0.003 K/sec                  
+               474 cpu-migrations            #    0.015 K/sec                  
+               443 page-faults               #    0.014 K/sec                  
+       48130354733 cycles                    #    1.501 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+       24668275972 instructions              #    0.51  insns per cycle        
+        5131777258 branches                  #  160.023 M/sec                  
+          66665741 branch-misses             #    1.30% of all branches        
+
+      32.151576444 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 34.5067 s, 304 MB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/global/cscratch1/sd/jialin.old/hk/cpu/10000_1.txt bs=1M count=10000':
+
+      34425.222587 task-clock                #    0.987 CPUs utilized          
+               178 context-switches          #    0.005 K/sec                  
+               560 cpu-migrations            #    0.016 K/sec                  
+               443 page-faults               #    0.013 K/sec                  
+       48221312384 cycles                    #    1.401 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+       24939872406 instructions              #    0.52  insns per cycle        
+        5176530154 branches                  #  150.370 M/sec                  
+          69240724 branch-misses             #    1.34% of all branches        
+
+      34.865547210 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 34.9217 s, 300 MB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/global/cscratch1/sd/jialin.old/hk/cpu/10000_2.txt bs=1M count=10000':
+
+      33911.155080 task-clock                #    0.970 CPUs utilized          
+               230 context-switches          #    0.007 K/sec                  
+               633 cpu-migrations            #    0.019 K/sec                  
+               443 page-faults               #    0.013 K/sec                  
+       47500374385 cycles                    #    1.401 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+       24686686806 instructions              #    0.52  insns per cycle        
+        5134508689 branches                  #  151.411 M/sec                  
+          67559917 branch-misses             #    1.32% of all branches        
+
+      34.957017024 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 36.0711 s, 291 MB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/global/cscratch1/sd/jialin.old/hk/cpu/10000_3.txt bs=1M count=10000':
+
+      34116.389137 task-clock                #    0.946 CPUs utilized          
+               173 context-switches          #    0.005 K/sec                  
+               357 cpu-migrations            #    0.010 K/sec                  
+               443 page-faults               #    0.013 K/sec                  
+       47788722838 cycles                    #    1.401 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+       24680276700 instructions              #    0.52  insns per cycle        
+        5134398704 branches                  #  150.497 M/sec                  
+          67977463 branch-misses             #    1.32% of all branches        
+
+      36.080257876 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 38.192 s, 275 MB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/global/cscratch1/sd/jialin.old/hk/cpu/10000_1.txt bs=1M count=10000':
+
+      36695.055434 task-clock                #    0.960 CPUs utilized          
+               306 context-switches          #    0.008 K/sec                  
+               828 cpu-migrations            #    0.023 K/sec                  
+               443 page-faults               #    0.012 K/sec                  
+       47727642924 cycles                    #    1.301 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+       24953640438 instructions              #    0.52  insns per cycle        
+        5179382041 branches                  #  141.147 M/sec                  
+          69725956 branch-misses             #    1.35% of all branches        
+
+      38.204932382 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 38.0643 s, 275 MB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/global/cscratch1/sd/jialin.old/hk/cpu/10000_2.txt bs=1M count=10000':
+
+      36108.417362 task-clock                #    0.948 CPUs utilized          
+               195 context-switches          #    0.005 K/sec                  
+               478 cpu-migrations            #    0.013 K/sec                  
+               443 page-faults               #    0.012 K/sec                  
+       46965965182 cycles                    #    1.301 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+       24714712803 instructions              #    0.53  insns per cycle        
+        5139756282 branches                  #  142.342 M/sec                  
+          67629396 branch-misses             #    1.32% of all branches        
+
+      38.072779264 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 36.4403 s, 288 MB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/global/cscratch1/sd/jialin.old/hk/cpu/10000_3.txt bs=1M count=10000':
+
+      36098.085224 task-clock                #    0.990 CPUs utilized          
+                71 context-switches          #    0.002 K/sec                  
+               959 cpu-migrations            #    0.027 K/sec                  
+               443 page-faults               #    0.012 K/sec                  
+       46954191418 cycles                    #    1.301 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+       24667184019 instructions              #    0.53  insns per cycle        
+        5130757741 branches                  #  142.134 M/sec                  
+          66250196 branch-misses             #    1.29% of all branches        
+
+      36.459561854 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 40.09 s, 262 MB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/global/cscratch1/sd/jialin.old/hk/cpu/10000_1.txt bs=1M count=10000':
+
+      39664.891508 task-clock                #    0.989 CPUs utilized          
+               109 context-switches          #    0.003 K/sec                  
+               314 cpu-migrations            #    0.008 K/sec                  
+               443 page-faults               #    0.011 K/sec                  
+       47624540637 cycles                    #    1.201 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+       24959867611 instructions              #    0.52  insns per cycle        
+        5181061808 branches                  #  130.621 M/sec                  
+          70588209 branch-misses             #    1.36% of all branches        
+
+      40.113189097 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 38.6887 s, 271 MB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/global/cscratch1/sd/jialin.old/hk/cpu/10000_2.txt bs=1M count=10000':
+
+      38649.383955 task-clock                #    0.999 CPUs utilized          
+                81 context-switches          #    0.002 K/sec                  
+               659 cpu-migrations            #    0.017 K/sec                  
+               443 page-faults               #    0.011 K/sec                  
+       46405486632 cycles                    #    1.201 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+       24675249691 instructions              #    0.53  insns per cycle        
+        5132122669 branches                  #  132.787 M/sec                  
+          66369132 branch-misses             #    1.29% of all branches        
+
+      38.707275569 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 39.3461 s, 267 MB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/global/cscratch1/sd/jialin.old/hk/cpu/10000_3.txt bs=1M count=10000':
+
+      38946.861812 task-clock                #    0.990 CPUs utilized          
+               171 context-switches          #    0.004 K/sec                  
+              1003 cpu-migrations            #    0.026 K/sec                  
+               443 page-faults               #    0.011 K/sec                  
+       46761528009 cycles                    #    1.201 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+       24671064457 instructions              #    0.53  insns per cycle        
+        5131816808 branches                  #  131.765 M/sec                  
+          67530983 branch-misses             #    1.32% of all branches        
+
+      39.357430069 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 43.0515 s, 244 MB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/global/cscratch1/sd/jialin.old/hk/cpu/10000_1.txt bs=1M count=10000':
+
+      42166.096166 task-clock                #    0.979 CPUs utilized          
+               245 context-switches          #    0.006 K/sec                  
+               598 cpu-migrations            #    0.014 K/sec                  
+               443 page-faults               #    0.011 K/sec                  
+       46407233463 cycles                    #    1.101 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+       24946544062 instructions              #    0.54  insns per cycle        
+        5177791769 branches                  #  122.795 M/sec                  
+          68055963 branch-misses             #    1.31% of all branches        
+
+      43.067355312 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 41.9745 s, 250 MB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/global/cscratch1/sd/jialin.old/hk/cpu/10000_2.txt bs=1M count=10000':
+
+      41768.306396 task-clock                #    0.995 CPUs utilized          
+               123 context-switches          #    0.003 K/sec                  
+               536 cpu-migrations            #    0.013 K/sec                  
+               443 page-faults               #    0.011 K/sec                  
+       45970583826 cycles                    #    1.101 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+       24688132912 instructions              #    0.54  insns per cycle        
+        5134527819 branches                  #  122.929 M/sec                  
+          66802246 branch-misses             #    1.30% of all branches        
+
+      41.983947602 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 42.8472 s, 245 MB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/global/cscratch1/sd/jialin.old/hk/cpu/10000_3.txt bs=1M count=10000':
+
+      42115.330197 task-clock                #    0.983 CPUs utilized          
+               205 context-switches          #    0.005 K/sec                  
+               776 cpu-migrations            #    0.018 K/sec                  
+               443 page-faults               #    0.011 K/sec                  
+       46351658155 cycles                    #    1.101 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+       24677388110 instructions              #    0.53  insns per cycle        
+        5133079451 branches                  #  121.881 M/sec                  
+          67767996 branch-misses             #    1.32% of all branches        
+
+      42.856519747 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 45.8673 s, 229 MB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/global/cscratch1/sd/jialin.old/hk/cpu/10000_1.txt bs=1M count=10000':
+
+      45690.624327 task-clock                #    0.996 CPUs utilized          
+                96 context-switches          #    0.002 K/sec                  
+               269 cpu-migrations            #    0.006 K/sec                  
+               443 page-faults               #    0.010 K/sec                  
+       45716418306 cycles                    #    1.001 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+       24944529735 instructions              #    0.55  insns per cycle        
+        5177009000 branches                  #  113.306 M/sec                  
+          67082937 branch-misses             #    1.30% of all branches        
+
+      45.882573934 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 49.2362 s, 213 MB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/global/cscratch1/sd/jialin.old/hk/cpu/10000_2.txt bs=1M count=10000':
+
+      46190.233923 task-clock                #    0.937 CPUs utilized          
+               199 context-switches          #    0.004 K/sec                  
+               634 cpu-migrations            #    0.014 K/sec                  
+               443 page-faults               #    0.010 K/sec                  
+       46215151792 cycles                    #    1.001 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+       24680259466 instructions              #    0.53  insns per cycle        
+        5133314482 branches                  #  111.134 M/sec                  
+          69196006 branch-misses             #    1.35% of all branches        
+
+      49.281673625 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 46.3432 s, 226 MB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/global/cscratch1/sd/jialin.old/hk/cpu/10000_3.txt bs=1M count=10000':
+
+      45797.967028 task-clock                #    0.988 CPUs utilized          
+               218 context-switches          #    0.005 K/sec                  
+               760 cpu-migrations            #    0.017 K/sec                  
+               443 page-faults               #    0.010 K/sec                  
+       45822388814 cycles                    #    1.001 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+       24673192304 instructions              #    0.54  insns per cycle        
+        5131872517 branches                  #  112.055 M/sec                  
+          66898032 branch-misses             #    1.30% of all branches        
+
+      46.352712679 seconds time elapsed
+

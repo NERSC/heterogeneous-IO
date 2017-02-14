@@ -1,0 +1,208 @@
+2301000
+:1
+cpu0:2301000
+cpu12:2301000
+cpu31:2301000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:32 /global/cscratch1/sd/jialin.old/hk/cpu/10000_1.txt
+:2
+cpu0:2301000
+cpu12:2301000
+cpu31:2301000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:32 /global/cscratch1/sd/jialin.old/hk/cpu/10000_2.txt
+:3
+cpu0:2301000
+cpu12:2301000
+cpu31:2301000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:32 /global/cscratch1/sd/jialin.old/hk/cpu/10000_3.txt
+2300000
+:1
+cpu0:2300000
+cpu12:2300000
+cpu31:2300000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:33 /global/cscratch1/sd/jialin.old/hk/cpu/10000_1.txt
+:2
+cpu0:2300000
+cpu12:2300000
+cpu31:2300000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:33 /global/cscratch1/sd/jialin.old/hk/cpu/10000_2.txt
+:3
+cpu0:2300000
+cpu12:2300000
+cpu31:2300000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:33 /global/cscratch1/sd/jialin.old/hk/cpu/10000_3.txt
+2200000
+:1
+cpu0:2200000
+cpu12:2200000
+cpu31:2200000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:33 /global/cscratch1/sd/jialin.old/hk/cpu/10000_1.txt
+:2
+cpu0:2200000
+cpu12:2200000
+cpu31:2200000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:34 /global/cscratch1/sd/jialin.old/hk/cpu/10000_2.txt
+:3
+cpu0:2200000
+cpu12:2200000
+cpu31:2200000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:34 /global/cscratch1/sd/jialin.old/hk/cpu/10000_3.txt
+2100000
+:1
+cpu0:2100000
+cpu12:2100000
+cpu31:2100000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:34 /global/cscratch1/sd/jialin.old/hk/cpu/10000_1.txt
+:2
+cpu0:2100000
+cpu12:2100000
+cpu31:2100000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:34 /global/cscratch1/sd/jialin.old/hk/cpu/10000_2.txt
+:3
+cpu0:2100000
+cpu12:2100000
+cpu31:2100000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:35 /global/cscratch1/sd/jialin.old/hk/cpu/10000_3.txt
+2000000
+:1
+cpu0:2000000
+cpu12:2000000
+cpu31:2000000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:35 /global/cscratch1/sd/jialin.old/hk/cpu/10000_1.txt
+:2
+cpu0:2000000
+cpu12:2000000
+cpu31:2000000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:35 /global/cscratch1/sd/jialin.old/hk/cpu/10000_2.txt
+:3
+cpu0:2000000
+cpu12:2000000
+cpu31:2000000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:36 /global/cscratch1/sd/jialin.old/hk/cpu/10000_3.txt
+1900000
+:1
+cpu0:1900000
+cpu12:1900000
+cpu31:1900000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:36 /global/cscratch1/sd/jialin.old/hk/cpu/10000_1.txt
+:2
+cpu0:1900000
+cpu12:1900000
+cpu31:1900000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:36 /global/cscratch1/sd/jialin.old/hk/cpu/10000_2.txt
+:3
+cpu0:1900000
+cpu12:1900000
+cpu31:1900000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:36 /global/cscratch1/sd/jialin.old/hk/cpu/10000_3.txt
+1800000
+:1
+cpu0:1800000
+cpu12:1800000
+cpu31:1800000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:37 /global/cscratch1/sd/jialin.old/hk/cpu/10000_1.txt
+:2
+cpu0:1800000
+cpu12:1800000
+cpu31:1800000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:37 /global/cscratch1/sd/jialin.old/hk/cpu/10000_2.txt
+:3
+cpu0:1800000
+cpu12:1800000
+cpu31:1800000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:37 /global/cscratch1/sd/jialin.old/hk/cpu/10000_3.txt
+1700000
+:1
+cpu0:1700000
+cpu12:1700000
+cpu31:1700000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:38 /global/cscratch1/sd/jialin.old/hk/cpu/10000_1.txt
+:2
+cpu0:1700000
+cpu12:1700000
+cpu31:1700000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:38 /global/cscratch1/sd/jialin.old/hk/cpu/10000_2.txt
+:3
+cpu0:1700000
+cpu12:1700000
+cpu31:1700000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:38 /global/cscratch1/sd/jialin.old/hk/cpu/10000_3.txt
+1600000
+:1
+cpu0:1600000
+cpu12:1600000
+cpu31:1600000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:39 /global/cscratch1/sd/jialin.old/hk/cpu/10000_1.txt
+:2
+cpu0:1600000
+cpu12:1600000
+cpu31:1600000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:39 /global/cscratch1/sd/jialin.old/hk/cpu/10000_2.txt
+:3
+cpu0:1600000
+cpu12:1600000
+cpu31:1600000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:39 /global/cscratch1/sd/jialin.old/hk/cpu/10000_3.txt
+1500000
+:1
+cpu0:1500000
+cpu12:1500000
+cpu31:1500000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:40 /global/cscratch1/sd/jialin.old/hk/cpu/10000_1.txt
+:2
+cpu0:1500000
+cpu12:1500000
+cpu31:1500000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:40 /global/cscratch1/sd/jialin.old/hk/cpu/10000_2.txt
+:3
+cpu0:1500000
+cpu12:1500000
+cpu31:1500000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:40 /global/cscratch1/sd/jialin.old/hk/cpu/10000_3.txt
+1400000
+:1
+cpu0:1400000
+cpu12:1400000
+cpu31:1400000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:41 /global/cscratch1/sd/jialin.old/hk/cpu/10000_1.txt
+:2
+cpu0:1400000
+cpu12:1400000
+cpu31:1400000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:41 /global/cscratch1/sd/jialin.old/hk/cpu/10000_2.txt
+:3
+cpu0:1400000
+cpu12:1400000
+cpu31:1400000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:41 /global/cscratch1/sd/jialin.old/hk/cpu/10000_3.txt
+1300000
+:1
+cpu0:1300000
+cpu12:1300000
+cpu31:1300000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:42 /global/cscratch1/sd/jialin.old/hk/cpu/10000_1.txt
+:2
+cpu0:1300000
+cpu12:1300000
+cpu31:1300000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:42 /global/cscratch1/sd/jialin.old/hk/cpu/10000_2.txt
+:3
+cpu0:1300000
+cpu12:1300000
+cpu31:1300000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:43 /global/cscratch1/sd/jialin.old/hk/cpu/10000_3.txt
+1200000
+:1
+cpu0:1200000
+cpu12:1200000
+cpu31:1200000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:43 /global/cscratch1/sd/jialin.old/hk/cpu/10000_1.txt
+:2
+cpu0:1200000
+cpu12:1200000
+cpu31:1200000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:43 /global/cscratch1/sd/jialin.old/hk/cpu/10000_2.txt
+:3
+cpu0:1200000
+cpu12:1200000
+cpu31:1200000
+-rw-r----- 1 jialin jialin 9.8G Feb  8 11:44 /global/cscratch1/sd/jialin.old/hk/cpu/10000_3.txt
