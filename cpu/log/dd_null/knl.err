@@ -1,0 +1,342 @@
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 2.76417 s, 3.8 GB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/dev/null bs=1M count=10000':
+
+       2765.721159 task-clock                #    0.997 CPUs utilized          
+                17 context-switches          #    0.006 K/sec                  
+                 1 cpu-migrations            #    0.000 K/sec                  
+               444 page-faults               #    0.161 K/sec                  
+        4150861403 cycles                    #    1.501 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+        5380875094 instructions              #    1.30  insns per cycle        
+        1339199854 branches                  #  484.214 M/sec                  
+           2679685 branch-misses             #    0.20% of all branches        
+
+       2.775428820 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 2.76108 s, 3.8 GB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/dev/null bs=1M count=10000':
+
+       2761.793784 task-clock                #    0.997 CPUs utilized          
+                14 context-switches          #    0.005 K/sec                  
+                 1 cpu-migrations            #    0.000 K/sec                  
+               444 page-faults               #    0.161 K/sec                  
+        4145010700 cycles                    #    1.501 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+        5380525941 instructions              #    1.30  insns per cycle        
+        1339127048 branches                  #  484.876 M/sec                  
+           2674746 branch-misses             #    0.20% of all branches        
+
+       2.768827024 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 2.75182 s, 3.8 GB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/dev/null bs=1M count=10000':
+
+       2753.239027 task-clock                #    0.997 CPUs utilized          
+                14 context-switches          #    0.005 K/sec                  
+                 1 cpu-migrations            #    0.000 K/sec                  
+               444 page-faults               #    0.161 K/sec                  
+        4132160790 cycles                    #    1.501 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+        5380526842 instructions              #    1.30  insns per cycle        
+        1339128026 branches                  #  486.383 M/sec                  
+           2674646 branch-misses             #    0.20% of all branches        
+
+       2.761101986 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 2.96007 s, 3.5 GB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/dev/null bs=1M count=10000':
+
+       2960.588345 task-clock                #    0.997 CPUs utilized          
+                21 context-switches          #    0.007 K/sec                  
+                 2 cpu-migrations            #    0.001 K/sec                  
+               444 page-faults               #    0.150 K/sec                  
+        4147105836 cycles                    #    1.401 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+        5380737592 instructions              #    1.30  insns per cycle        
+        1339168341 branches                  #  452.332 M/sec                  
+           2674594 branch-misses             #    0.20% of all branches        
+
+       2.970435768 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 2.96138 s, 3.5 GB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/dev/null bs=1M count=10000':
+
+       2962.713247 task-clock                #    0.998 CPUs utilized          
+                11 context-switches          #    0.004 K/sec                  
+                 1 cpu-migrations            #    0.000 K/sec                  
+               444 page-faults               #    0.150 K/sec                  
+        4150131931 cycles                    #    1.401 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+        5380977089 instructions              #    1.30  insns per cycle        
+        1339218257 branches                  #  452.024 M/sec                  
+           2680603 branch-misses             #    0.20% of all branches        
+
+       2.968096602 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 2.94393 s, 3.6 GB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/dev/null bs=1M count=10000':
+
+       2944.841146 task-clock                #    0.998 CPUs utilized          
+                18 context-switches          #    0.006 K/sec                  
+                 1 cpu-migrations            #    0.000 K/sec                  
+               444 page-faults               #    0.151 K/sec                  
+        4125051797 cycles                    #    1.401 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+        5380962747 instructions              #    1.30  insns per cycle        
+        1339214718 branches                  #  454.766 M/sec                  
+           2680278 branch-misses             #    0.20% of all branches        
+
+       2.952152225 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 3.18173 s, 3.3 GB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/dev/null bs=1M count=10000':
+
+       3181.738947 task-clock                #    0.996 CPUs utilized          
+                26 context-switches          #    0.008 K/sec                  
+                 1 cpu-migrations            #    0.000 K/sec                  
+               444 page-faults               #    0.140 K/sec                  
+        4138462160 cycles                    #    1.301 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+        5381158876 instructions              #    1.30  insns per cycle        
+        1339252842 branches                  #  420.919 M/sec                  
+           2685573 branch-misses             #    0.20% of all branches        
+
+       3.193449372 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 3.18443 s, 3.3 GB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/dev/null bs=1M count=10000':
+
+       3185.433232 task-clock                #    0.998 CPUs utilized          
+                20 context-switches          #    0.006 K/sec                  
+                 2 cpu-migrations            #    0.001 K/sec                  
+               444 page-faults               #    0.139 K/sec                  
+        4143323107 cycles                    #    1.301 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+        5381359834 instructions              #    1.30  insns per cycle        
+        1339294645 branches                  #  420.443 M/sec                  
+           2685678 branch-misses             #    0.20% of all branches        
+
+       3.192393410 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 3.18657 s, 3.3 GB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/dev/null bs=1M count=10000':
+
+       3186.805068 task-clock                #    0.997 CPUs utilized          
+                24 context-switches          #    0.008 K/sec                  
+                 1 cpu-migrations            #    0.000 K/sec                  
+               444 page-faults               #    0.139 K/sec                  
+        4145066995 cycles                    #    1.301 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+        5381095705 instructions              #    1.30  insns per cycle        
+        1339240752 branches                  #  420.246 M/sec                  
+           2683615 branch-misses             #    0.20% of all branches        
+
+       3.195441738 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 3.44978 s, 3.0 GB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/dev/null bs=1M count=10000':
+
+       3451.035500 task-clock                #    0.997 CPUs utilized          
+                21 context-switches          #    0.006 K/sec                  
+                 1 cpu-migrations            #    0.000 K/sec                  
+               444 page-faults               #    0.129 K/sec                  
+        4143478446 cycles                    #    1.201 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+        5381634520 instructions              #    1.30  insns per cycle        
+        1339346927 branches                  #  388.100 M/sec                  
+           2690088 branch-misses             #    0.20% of all branches        
+
+       3.462853945 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 3.45783 s, 3.0 GB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/dev/null bs=1M count=10000':
+
+       3458.711183 task-clock                #    0.997 CPUs utilized          
+                22 context-switches          #    0.006 K/sec                  
+                 2 cpu-migrations            #    0.001 K/sec                  
+               444 page-faults               #    0.128 K/sec                  
+        4152675405 cycles                    #    1.201 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+        5381764368 instructions              #    1.30  insns per cycle        
+        1339374298 branches                  #  387.247 M/sec                  
+           2696385 branch-misses             #    0.20% of all branches        
+
+       3.468023088 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 3.452 s, 3.0 GB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/dev/null bs=1M count=10000':
+
+       3451.306564 task-clock                #    0.998 CPUs utilized          
+                32 context-switches          #    0.009 K/sec                  
+                 1 cpu-migrations            #    0.000 K/sec                  
+               444 page-faults               #    0.129 K/sec                  
+        4143689327 cycles                    #    1.201 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+        5381750129 instructions              #    1.30  insns per cycle        
+        1339370516 branches                  #  388.076 M/sec                  
+           2696569 branch-misses             #    0.20% of all branches        
+
+       3.459870979 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 3.76429 s, 2.8 GB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/dev/null bs=1M count=10000':
+
+       3765.697734 task-clock                #    0.997 CPUs utilized          
+                21 context-switches          #    0.006 K/sec                  
+                 1 cpu-migrations            #    0.000 K/sec                  
+               444 page-faults               #    0.118 K/sec                  
+        4144514241 cycles                    #    1.101 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+        5381982664 instructions              #    1.30  insns per cycle        
+        1339417519 branches                  #  355.689 M/sec                  
+           2694933 branch-misses             #    0.20% of all branches        
+
+       3.777598326 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 3.76376 s, 2.8 GB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/dev/null bs=1M count=10000':
+
+       3764.781111 task-clock                #    0.998 CPUs utilized          
+                21 context-switches          #    0.006 K/sec                  
+                 0 cpu-migrations            #    0.000 K/sec                  
+               444 page-faults               #    0.118 K/sec                  
+        4143506163 cycles                    #    1.101 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+        5382028429 instructions              #    1.30  insns per cycle        
+        1339424794 branches                  #  355.778 M/sec                  
+           2695577 branch-misses             #    0.20% of all branches        
+
+       3.773694347 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 3.76843 s, 2.8 GB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/dev/null bs=1M count=10000':
+
+       3770.051240 task-clock                #    0.998 CPUs utilized          
+                19 context-switches          #    0.005 K/sec                  
+                 1 cpu-migrations            #    0.000 K/sec                  
+               444 page-faults               #    0.118 K/sec                  
+        4149312000 cycles                    #    1.101 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+        5382131816 instructions              #    1.30  insns per cycle        
+        1339443822 branches                  #  355.285 M/sec                  
+           2697148 branch-misses             #    0.20% of all branches        
+
+       3.778955920 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 4.1379 s, 2.5 GB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/dev/null bs=1M count=10000':
+
+       4138.945514 task-clock                #    0.997 CPUs utilized          
+                22 context-switches          #    0.005 K/sec                  
+                 1 cpu-migrations            #    0.000 K/sec                  
+               444 page-faults               #    0.107 K/sec                  
+        4141208682 cycles                    #    1.001 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+        5382394487 instructions              #    1.30  insns per cycle        
+        1339495782 branches                  #  323.632 M/sec                  
+           2699769 branch-misses             #    0.20% of all branches        
+
+       4.153012170 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 4.12779 s, 2.5 GB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/dev/null bs=1M count=10000':
+
+       4128.894111 task-clock                #    0.998 CPUs utilized          
+                20 context-switches          #    0.005 K/sec                  
+                 1 cpu-migrations            #    0.000 K/sec                  
+               444 page-faults               #    0.108 K/sec                  
+        4131141420 cycles                    #    1.001 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+        5382451034 instructions              #    1.30  insns per cycle        
+        1339507262 branches                  #  324.423 M/sec                  
+           2697594 branch-misses             #    0.20% of all branches        
+
+       4.138622956 seconds time elapsed
+
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB) copied, 4.13325 s, 2.5 GB/s
+
+ Performance counter stats for 'dd if=/dev/zero of=/dev/null bs=1M count=10000':
+
+       4135.089517 task-clock                #    0.998 CPUs utilized          
+                14 context-switches          #    0.003 K/sec                  
+                 1 cpu-migrations            #    0.000 K/sec                  
+               444 page-faults               #    0.107 K/sec                  
+        4137397322 cycles                    #    1.001 GHz                    
+   <not supported> stalled-cycles-frontend 
+   <not supported> stalled-cycles-backend  
+        5382448122 instructions              #    1.30  insns per cycle        
+        1339506720 branches                  #  323.937 M/sec                  
+           2697309 branch-misses             #    0.20% of all branches        
+
+       4.143824027 seconds time elapsed
+
