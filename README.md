@@ -8,4 +8,5 @@ https://github.com/NERSC/heterogeneous-IO/blob/master/cpu/plot/hio.ipynb
 # To try what we tried
 
 cd cpu/script
+
 sbatch master.sh
