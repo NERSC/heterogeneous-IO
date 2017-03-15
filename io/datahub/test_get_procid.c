@@ -44,9 +44,9 @@ int main(int argc, char ** argv)
  dims_y = 1000;
  strncpy(dataset,"temperatures",NAME_MAX);
  int col=1;//collective write
+ int direct=0;
 
-
- while ((c = getopt (argc, argv, "f:b:k:n:x:y:z:l:m:")) != -1)
+ while ((c = getopt (argc, argv, "f:b:k:n:x:y:z:l:m:d:")) != -1)
     switch (c)
       {
       case 'f':
@@ -72,6 +72,8 @@ int main(int argc, char ** argv)
         break;
       case 'm':
         knlmax = strtol(optarg, NULL, 10);
+      case 'd':
+        direct = strtol(optarg, NULL, 10);
       default:
         break;
       }
@@ -89,7 +91,7 @@ int main(int argc, char ** argv)
  memset(color_list,0,sizeof(int)*nproc);
  MPI_Comm comm_kid=rank_split(MPI_COMM_WORLD, haswell, knl, color, color_list); //Split Haswell and Knl partitions, return their  colors,i.e., either haswell or knl
  int global_color_list[nproc];
- MPI_Reduce(color_list,global_color_list,nproc,MPI_INT,MPI_MAX,0,MPI_COMM_WORLD); // get the global color list
+ MPI_Allreduce(color_list,global_color_list,nproc,MPI_INT,MPI_MAX,MPI_COMM_WORLD); // get the global color list
  int rank_kid,nproc_kid;
  MPI_Comm_rank(comm_kid,&rank_kid);
  MPI_Comm_size(comm_kid,&nproc_kid);
@@ -102,9 +104,9 @@ int main(int argc, char ** argv)
 //Partition along X
 
  result_offset[1] = 0;
- result_offset[0] =  (dims_x / nproc) * rank; //later need to take care edge case
- result_count[0] = dims_x / nproc;
- result_count[1] = dims_y;
+ result_offset[0] =(hsize_t)( (dims_x / nproc) * rank); //later need to take care edge case
+ result_count[0] =(hsize_t)( dims_x / nproc);
+ result_count[1] =(hsize_t)( dims_y);
 
 //Data Allocation and Generation for each rank:
  data_t = (double *)malloc(result_count[0] * result_count[1] * sizeof(double));
@@ -157,12 +159,11 @@ struct sendrecv{
 struct sendrecv * isr=(struct sendrecv *)malloc(1*sizeof(struct sendrecv));
 isr->src=(int *)malloc(sizeof(int));
 isr->total=0;
-printf("rank:%d\n",rank);
 if (i_rank_knl<=i_rank_has){ // safe case, haswell nodes are enough to handle knl workload
  for (i=0;i<i_rank_knl;i++){ // 1 to 1
   int cur_has_rank=rank_has[i];
   int cur_knl_rank=rank_knl[i];
- // printf("cur rank:%d,cur knl:%d, cur has:%d\n",rank,cur_knl_rank,cur_has_rank);
+  //printf("cur rank:%d,cur knl:%d, cur has:%d\n",rank,cur_knl_rank,cur_has_rank);
   if(cur_has_rank==rank){ // update haswell rank's sendrecv struct
     if(isr->total>0)
       isr->src=realloc(isr->src,(isr->total+1)*sizeof(int));
@@ -201,8 +202,75 @@ for(i=0;i<i_rank_has;i++){
      data_t=realloc(data_t,result_count[0]*result_count[1]*(1+isr->total)*sizeof(double));
  } 
 }
+double t0,t1;
+t0=MPI_Wtime();
+t1=t0;
+if(data_t==NULL){
+  printf("malloc error \n");
+  MPI_Abort(MPI_COMM_WORLD,711);
+}
+//DO IO
+if(direct==1){
+//Do original IO
+   //Create new file and write result to this file
+   plist_id3 = H5Pcreate(H5P_FILE_ACCESS);
+   MPI_Info_create(&info);
+   if(col==1){
+    MPI_Info_set(info, "cb_buffer_size", cb_buffer_size);
+    MPI_Info_set(info, "cb_nodes", cb_nodes);
+    H5Pset_fapl_mpio(plist_id3, MPI_COMM_WORLD, info);
+
+    file_id2 = H5Fcreate(filename, H5F_ACC_RDWR, H5P_DEFAULT, plist_id3);
+    H5Pclose(plist_id3);
+   }
+   else{
+    info=MPI_INFO_NULL;
+    H5Pset_fapl_mpio(plist_id3, MPI_COMM_WORLD,info);
+    file_id2 = H5Fcreate(filename, H5F_ACC_RDWR, H5P_DEFAULT, plist_id3);
+    if(rank==0) {
+	printf("plist_id3: %d,fild_id2: %d\n",plist_id3,file_id2);
+        printf("filename: %s\n",filename);
+        if(file_id2<0) {
+	   printf("H5Fcreate error\n");
+	}
+    }
+    if(file_id2<0) {
+       return 0;
+    }
+   }
+   dims2[0] = dims_x;//assume regular pattern, where size simply doubles along x dimension. 
+   dims2[1] = dims_y;
+   dataspace_id2 = H5Screate_simple(2, dims2, NULL);
+   dset_id2 = H5Dcreate(file_id2,dataset, H5T_NATIVE_DOUBLE, dataspace_id2, H5P_DEFAULT, H5P_DEFAULT, H5P_DEFAULT);
+   H5Sclose(dataspace_id2);
+   result_space = H5Dget_space(dset_id2);
+   H5Sselect_hyperslab(result_space, H5S_SELECT_SET, result_offset, NULL, result_count, NULL);
+
+   result_memspace_size[0] = result_count[0];
+   result_memspace_size[1] = result_count[1];
+   result_memspace_id = H5Screate_simple(2, result_memspace_size, NULL);
+   if(col==1){ // collective io
+     plist_id4 = H5Pcreate(H5P_DATASET_XFER);
+     H5Pset_dxpl_mpio(plist_id4, H5FD_MPIO_COLLECTIVE);
+
+     H5Dwrite(dset_id2, H5T_NATIVE_DOUBLE, result_memspace_id, result_space, plist_id4, data_t);
+     H5Pclose(plist_id4);
+   }
+   else{ //independent io
+     H5Dwrite(dset_id2, H5T_NATIVE_DOUBLE, result_memspace_id, result_space, H5P_DEFAULT, data_t);
+   }
+   free(data_t);
+   H5Sclose(result_space);
+   H5Sclose(result_memspace_id);
+   H5Dclose(dset_id2);
+   H5Fclose(file_id2);
+}
+else{
+//DO IO offloading
+
+//Communication first
 MPI_Barrier(MPI_COMM_WORLD);
-double t0 = MPI_Wtime();
+t0 = MPI_Wtime();
 //Communication
 int size_block=result_count[0]*result_count[1];
 //Simple Case, Send all to Haswell
@@ -211,31 +279,36 @@ MPI_Request sr_request;
 MPI_Status sr_status;
 
 for(i=0;i<isr->total;i++){
- printf("receiver:%d,1st sender:%d\n",rank,isr->src[0]);
+ //printf("receiver:%d,1st sender:%d\n",rank,isr->src[0]);
  //nonblocking send receive
  MPI_Irecv(data_t+size_block*(i+1),size_block,MPI_DOUBLE,isr->src[i],123,MPI_COMM_WORLD,&sr_request);
 }
 if(isr->total==0){//sender side, i.e., knl partition
- printf("sender:%d,receiver:%d\n",rank,isr->src[0]);
+ //printf("sender:%d,receiver:%d\n",rank,isr->src[0]);
  MPI_Isend(data_t,size_block,MPI_DOUBLE,*(isr->src),123,MPI_COMM_WORLD,&sr_request);
 }
 
 MPI_Wait(&sr_request,&status);
 //One-sided communication: send round-robin to a datahub, receive round-robin from the datahub
- 
+
 MPI_Barrier(MPI_COMM_WORLD);
-double t1 = MPI_Wtime();
-//DO IO
+t1 = MPI_Wtime();
+
+//Do IO
  if(*color==1){//ask haswell to do io
    //Create new file and write result to this file
    plist_id3 = H5Pcreate(H5P_FILE_ACCESS);
    MPI_Info_create(&info);
-   //MPI_Info_set(info, "cb_buffer_size", cb_buffer_size);
-   //MPI_Info_set(info, "cb_nodes", cb_nodes);
-   H5Pset_fapl_mpio(plist_id3, comm_kid, info);
-
-   file_id2 = H5Fcreate(filename, H5F_ACC_TRUNC, H5P_DEFAULT, plist_id3);
-   H5Pclose(plist_id3);
+   MPI_Info_set(info, "cb_buffer_size", cb_buffer_size);
+   MPI_Info_set(info, "cb_nodes", cb_nodes);
+   if(col==1){
+     
+     H5Pset_fapl_mpio(plist_id3, comm_kid, info);
+     file_id2 = H5Fcreate(filename, H5F_ACC_RDWR, H5P_DEFAULT, plist_id3);
+     H5Pclose(plist_id3);
+   }else{
+     file_id2 = H5Fcreate(filename, H5F_ACC_RDWR, H5P_DEFAULT, H5P_DEFAULT);
+   }
    dims2[0] = dims_x;//assume regular pattern, where size simply doubles along x dimension. 
    dims2[1] = dims_y;
    dataspace_id2 = H5Screate_simple(2, dims2, NULL);
@@ -248,26 +321,36 @@ double t1 = MPI_Wtime();
    result_memspace_size[0] = result_count[0];
    result_memspace_size[1] = result_count[1];
    result_memspace_id = H5Screate_simple(2, result_memspace_size, NULL);
-   plist_id4 = H5Pcreate(H5P_DATASET_XFER);
-   H5Pset_dxpl_mpio(plist_id4, H5FD_MPIO_COLLECTIVE);
-
-   H5Dwrite(dset_id2, H5T_NATIVE_DOUBLE, result_memspace_id, result_space, plist_id4, data_t);
-   H5Pclose(plist_id4);
+   if(col==1){//collective io
+     plist_id4 = H5Pcreate(H5P_DATASET_XFER);
+     H5Pset_dxpl_mpio(plist_id4, H5FD_MPIO_COLLECTIVE);
+     H5Dwrite(dset_id2, H5T_NATIVE_DOUBLE, result_memspace_id, result_space, plist_id4, data_t);
+     H5Pclose(plist_id4);
+   }
+   else{//independent io
+     H5Dwrite(dset_id2, H5T_NATIVE_DOUBLE, result_memspace_id, result_space, H5P_DEFAULT, data_t);
+   }
    free(data_t);
    H5Sclose(result_space);
    H5Sclose(result_memspace_id);
    H5Dclose(dset_id2);
    H5Fclose(file_id2);
  }
- else if (*color==2){
-   printf(" Rank: %10d, Rank_kid: %10d, Total_Kids: %10d, Total: %10d\n ",rank,rank_kid,nproc_kid,nproc);
- }
+ //else if (*color==2){
+ //  printf(" Rank: %10d, Rank_kid: %10d, Total_Kids: %10d, Total: %10d\n ",rank,rank_kid,nproc_kid,nproc);
+ //}
+}
  MPI_Barrier(MPI_COMM_WORLD);
  double t2 = MPI_Wtime();
  if(rank==0)
- {
-   printf("comm %.2fs,(%.2f); io %.2fs, (%.2f)\n",t1-t0,(t1-t0)/(t2-t0),t2-t1,(t2-t1)/(t2-t0));
-   printf("data size: %.2fG at %s \n",file_size,filename); 
+ { 
+   if(direct==1)
+    printf("No IO Offloading,io process:%d\n",nproc);
+   else printf("IO Offloading,io process:%d\n",i_rank_has);
+   if(col==1) { printf("Collective IO,buffer:%s,aggregator:%s\n",cb_buffer_size,cb_nodes);}
+   else printf("Independent IO\n");
+   printf("Comm %.2fs,(%.2f); IO %.2fs, (%.2f); Total:%.2f\n",t1-t0,(t1-t0)/(t2-t0),t2-t1,(t2-t1)/(t2-t0),t2-t0);
+   printf("Data size: %.2fG at %s \n",file_size,filename); 
  }
  MPI_Finalize();
  return 0;
