@@ -2,8 +2,6 @@
 #include "hdf5.h"
 #include "getopt.h"
 #include <string.h>
-
-
 #define NAME_MAX 255
 char filename[NAME_MAX];
 char dataset[NAME_MAX];
@@ -113,17 +111,14 @@ int main(int argc, char **argv){
     else 
     printf("Independent Write data ... \n");
   }
-  if(col==1){
-   
+  if(col==1){  
    plist_id4 = H5Pcreate(H5P_DATASET_XFER);
    H5Pset_dxpl_mpio(plist_id4, H5FD_MPIO_COLLECTIVE);
-
    H5Dwrite(dset_id2, H5T_NATIVE_DOUBLE, result_memspace_id, result_space, plist_id4, data_t);
    H5Pclose(plist_id4);
   }
   else{
    H5Dwrite(dset_id2, H5T_NATIVE_DOUBLE, result_memspace_id, result_space, H5P_DEFAULT, data_t);
-
   }
 
   //printf("rank %d,start0 %lld count0 %lld,start1 %lld count1 %lld\n",mpi_rank,result_offset[0],result_count[0],result_offset[1],result_count[1]);
