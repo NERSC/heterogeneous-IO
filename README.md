@@ -2,7 +2,7 @@
 * Understanding the IO Performance on KNL and Haswell
 * Design Heterogenous IO solution along ExaScale Computing Roadmap
 
-# To learn what we learned, Check the ipython notebook first 
+# To explore the result: 
 
 * How does CPU impact Knl and Haswell IO:
 
@@ -12,8 +12,8 @@ https://github.com/NERSC/heterogeneous-IO/blob/master/cpu/plot/hio.ipynb
 
 https://github.com/NERSC/heterogeneous-IO/blob/master/cpu/plot/iostack.ipynb
 
-# To reproduce:
+# To reproduce the result:
 
-cd cpu/script
+* cd cpu/script
 
-sbatch master.sh
+* sbatch master.sh
