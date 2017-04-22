@@ -4,13 +4,16 @@
 
 # To visualize the result: 
 
-* How does CPU impact Knl and Haswell IO:
+* IO Gap caused by CPU frequencies:
 
 		https://github.com/NERSC/heterogeneous-IO/blob/master/cpu/plot/hio.ipynb
 
-* How does HPC IO stack cause Knl and Haswell IO difference:
+* IO Gap caused by page cache:
 
 		https://github.com/NERSC/heterogeneous-IO/blob/master/cpu/plot/iostack.ipynb
+		
+* IO Gap caused by MPI and HDF5:
+
 
 # To reproduce the result:
 
