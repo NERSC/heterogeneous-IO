@@ -4,11 +4,11 @@
 
 # To learn what we learned, Check the ipython notebook first 
 
-How does CPU impact Knl and Haswell IO:
+* How does CPU impact Knl and Haswell IO:
 
 https://github.com/NERSC/heterogeneous-IO/blob/master/cpu/plot/hio.ipynb
 
-How does HPC IO stack cause Knl and Haswell IO difference:
+* How does HPC IO stack cause Knl and Haswell IO difference:
 
 https://github.com/NERSC/heterogeneous-IO/blob/master/cpu/plot/iostack.ipynb
 
