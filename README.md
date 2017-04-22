@@ -1,5 +1,6 @@
-# heterogenous-IO
-Understanding the IO Performance on KNL and Haswell
+# Heterogenous-IO
+* Understanding the IO Performance on KNL and Haswell
+* Design Heterogenous IO solution along ExaScale Computing Roadmap
 
 # To learn what we learned, Check the ipython notebook first 
 
